@@ -17,8 +17,6 @@ prerelease: false
 start_page: user-guide:introduction.adoc
 nav:
   - modules/user-guide/nav.adoc
-  - modules/contributor-guide/nav.adoc
-  - modules/reference-guide/nav.adoc
 asciidoc:
   attributes:
     # for antora

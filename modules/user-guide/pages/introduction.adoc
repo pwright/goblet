@@ -22,11 +22,3 @@ video::745894696[vimeo,align="left",title="A brief non-technical introduction"]
 * You can perform more consistent peer reviews.
 * You can write content that is more easily localized.
 
-[id="con_additional_resources_{context}"]
-== Additional resources
-
-* xref:redhat-style-for-vale.adoc[]
-* xref:glossary.adoc[]
-
-* xref:installing-vale-cli.adoc[]
-* xref:defining-a-vale-onboarding-strategy.adoc[]
