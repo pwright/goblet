@@ -1,9 +1,9 @@
-name: Build and deploy to GitHub Pages (Staging)
+name: Build and deploy to GitHub Pages (main)
 
 on:
   push:
     branches:
-      - staging
+      - main
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
