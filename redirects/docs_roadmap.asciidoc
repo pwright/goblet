@@ -1,5 +1,0 @@
----
-permalink: /docs/roadmap/
-layout: redirect
-redir_to: /roadmap
----

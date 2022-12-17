@@ -1,5 +1,0 @@
----
-permalink: /docs/releases/
-layout: redirect
-redir_to: /releases/!LATEST_VERSION!/release-notes
----

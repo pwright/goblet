@@ -1,5 +1,0 @@
----
-permalink: /docs/faq/
-layout: redirect
-redir_to: /documentation/faq
----

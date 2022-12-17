@@ -1,5 +1,0 @@
----
-layout: release-version
-title: Debezium Release Series 1.5
-debezium-version: "1.5"
----

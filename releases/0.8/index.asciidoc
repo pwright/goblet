@@ -1,1 +1,0 @@
-= Debezium Release Series 0.8

@@ -1,5 +1,0 @@
----
-permalink: /docs/configuration/logging/
-layout: redirect
-redir_to: /documentation/reference/!LATEST_STABLE_VERSION!/operations/logging.html
----

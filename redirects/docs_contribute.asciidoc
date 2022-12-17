@@ -1,5 +1,0 @@
----
-permalink: /docs/contribute/
-layout: redirect
-redir_to: /community/contribute
----

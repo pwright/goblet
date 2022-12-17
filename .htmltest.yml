@@ -1,0 +1,19 @@
+---
+# Copyright (c) 2021 Red Hat, Inc.
+# This program and the accompanying materials are made
+# available under the terms of the Eclipse Public License 2.0
+# which is available at https://www.eclipse.org/legal/epl-2.0/
+#
+# SPDX-License-Identifier: EPL-2.0
+#
+# Configuration file for the `htmltest` tool.
+# The `htmltest` tool is validating the internal and external links on the HTML build of the documentation.
+# See: https://github.com/wjdp/htmltest
+
+DirectoryPath: build/
+OutputDir: .cache/htmltest
+ExternalTimeout: 60 # (seconds) default is 15.
+IgnoreURLs:
+  - https://cse.google.com/cse.js
+  - https://github.com/redhat-documentation/vale-at-red-hat
+  - https://marketplace.visualstudio.com
