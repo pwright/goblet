@@ -10,13 +10,13 @@
 # See https://docs.antora.org/antora/latest/component-version-descriptor/
 #
 name: docs
-title: Vale for writers at Red Hat
+title: Goblet
 version: main # Define a Component Version with No Version
 display_version: main
 prerelease: false
-start_page: user-guide:introduction.adoc
+start_page: goblet:index.adoc
 nav:
-  - modules/user-guide/nav.adoc
+  - modules/goblet/nav.adoc
 asciidoc:
   attributes:
     # for antora
