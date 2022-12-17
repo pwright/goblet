@@ -11,9 +11,9 @@
 # See: https://docs.antora.org/antora/latest/playbook/
 #
 site:
-  url: https://pwright.github.io/goblet
+  url: https://redhat-documentation.github.io/vale-at-red-hat
   title: Vale for writers at Red Hat
-  start_page: goblet::index.adoc
+  start_page: docs::index.adoc
   robots: allow
 content:
   sources:
@@ -21,13 +21,13 @@ content:
       branches:
         - HEAD
         - v*
-      edit_url: "https://github.com/pwright/goblet/{refname}/{path}"
+      edit_url: "https://github.com/redhat-documentation/vale-at-red-hat/edit/{refname}/{path}"
 antora:
   extensions:
     - require: "@antora/lunr-extension" # https://gitlab.com/antora/antora-lunr-extension/
 asciidoc:
   attributes:
-    context: goblet
+    context: docs
   sourcemap: true
 ui:
   bundle:
@@ -43,7 +43,7 @@ output:
   destinations:
     - provider: fs
       clean: true
-      path: build/goblet/
+      path: build/vale-at-red-hat/
 runtime:
   log:
     level: info

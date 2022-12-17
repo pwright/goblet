@@ -1,0 +1,11 @@
+:navtitle: Definitions
+:keywords: reference, rule, Definitions
+
+= Definitions
+
+Define acronyms and abbreviations on first occurrence if they are likely to be unfamiliar.
+
+.Additional resources
+
+* link:{ibmsg-url-print}[{ibmsg-print} - Abbreviations, p. 1]
+* link:{ibmsg-url}?topic=grammar-abbreviations[{ibmsg} - Abbreviations]

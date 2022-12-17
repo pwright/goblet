@@ -1,0 +1,11 @@
+:navtitle: Release notes
+:keywords: reference, rule, release notes
+
+= Release notes
+
+For release notes, consider using `Before this update` or `With this update`.
+
+.Additional resources
+
+* link:{ssg-url}#release-notes[{ssg} - Release notes]
+

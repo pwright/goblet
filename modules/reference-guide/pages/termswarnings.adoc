@@ -1,0 +1,24 @@
+// Metadata for Antora
+:navtitle: Warning terms
+:keywords: reference, rule, terms warnings
+// :page-aliases:
+// End of metadata for Antora
+
+:parent-context-of-terms-warnings: {context}
+
+[id="terms-warnings_{context}"]
+= Warning terms
+
+Alert level:: Warning
+
+Use the correct term as described in Red Hat Supplementary Style Guide (SSG), unless updating existing content that uses the term.
+
+include::partial$ref_warning_terms.adoc[leveloffset=+1]
+
+:context: {parent-context-of-terms-warnings}
+
+.Additional resources
+
+* link:{ssg-url}#glossary-terms-conventions[{ssg} - Glossary of terms and conventions]
+* link:{ibmsg-url-print}[{ibmsg-print} - Appendix C. Word usage, p. 300]
+* link:{ibmsg-url}?topic=word-usage[{ibmsg} - Word usage]

@@ -1,0 +1,73 @@
+// Metadata for Antora
+:navtitle: Installing Vale
+:keywords: vale
+:description: Describes how to install from the latest release and configure the Vale CLI
+:page-aliases: end-user-guide:using-vale-cli.adoc, installing-vale-cli-from-zip.adoc
+// End of metadata for Antora
+// Metadata for Modular Docs
+:context: assembly_getting-started-with-vale
+:_module-type: PROCEDURE
+// End of metadata for Modular Docs
+[id="proc_installing-vale-cli_{context}"]
+= Installing Vale with the `RedHat` package
+
+To use Vale CLI with the `RedHat` style on any project without further configuration in the projects: install and configure Vale CLI version 2.16.0 or later.
+
+.Procedure
+
+. Install the Vale command-line tool on your workstation.
+See link:https://vale.sh/docs/vale-cli/installation/[Installing Vale].
++
+[NOTE]
+On the Vale site, click the tab for your operating system.
+
+. Register the `RedHat` Vale package in the `.vale.ini` Vale configuration file. Save the file in your `$HOME` directory:
++
+.The `$HOME/.vale.ini` file
+[source,ini]
+----
+StylesPath = styles
+
+MinAlertLevel = suggestion
+
+Packages = RedHat
+
+[*]
+BasedOnStyles = RedHat
+----
++
+[TIP]
+Some projects require a specific Vale configuration.
+Consider saving the `.vale.ini` file at the root of the project.
+See link:https://vale.sh/docs/topics/config[Vale configuration reference].
+
+. Initialize the Vale package.
++
+[source,console]
+----
+$ vale sync
+----
++
+[TIP]
+Run the `vale sync` command periodically to update the `RedHat` Vale package.
+
+.Verification
+
+. Enter the `vale` command on one of your content files.
++
+[source,console,subs="+quotes,+attributes"]
+----
+$ cd __<project_directory>__
+$ vale __<filename>__
+----
+
+. Review the vale output and use it to update your content file.
+
+. Re-enter the same `vale` command to see the updated results.
+
+.Additional resources
+* xref:understanding-vale-output.adoc[]
+* xref:defining-a-vale-onboarding-strategy.adoc[]
+* link:https://vale.sh/docs/vale-cli/installation/[Installing Vale CLI]
+* link:https://vale.sh/docs/topics/config[Configuring Vale CLI]
+* link:https://vale.sh/generator[Vale configuration generator]
