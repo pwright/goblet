@@ -17,5 +17,3 @@ jobs:
         with:
           deploy_key: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: staging_publish
-          external_repository: debezium-builder/debezium-builder.github.io
