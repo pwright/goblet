@@ -1,0 +1,29 @@
+---
+layout: post
+title:  Debezium 1.0.0.Beta1 Released
+date:   2019-10-17 10:19:59 -0600
+tags: [ releases, mysql, postgres, sqlserver, cassandra ]
+author: ccranfor
+---
+
+History is in the making as Debezium begins to sprint to its 1.0 milestone.
+It's my pleasure to announce the release of Debezium *1.0.0.Beta1*!
+
+This new Debezium release includes several notable new features, enhancements, and fixes:
+
+* ExtractNewDocumentState and EventRouter SMTs propagate heartbeat &amp; schema change messages (https://issues.redhat.com/browse/DBZ-1513[DBZ-1513])
+* Provides alternative mapping for `INTERVAL` columns via `interval.handling.mode` (https://issues.redhat.com/browse/DBZ-1498[DBZ-1498])
+* Ensure message keys have the right column order (https://issues.redhat.com/browse/DBZ-1507[DBZ-1507])
+* Warn of table locking problems in connector logs (https://issues.redhat.com/browse/DBZ-1280[DBZ-1280])
+
++++<!-- more -->+++
+
+Additionally, several PostgreSQL issues were fixed to improve snapshotting large databases environments (https://issues.redhat.com/browse/DBZ-685[DBZ-685]) and specific circumstances where write ahead logs (WAL) would continue to consume diskspace (https://issues.redhat.com/browse/DBZ-892[DBZ-892]).
+
+In total, this release contains link:/releases/1.0/release-notes/#release-1.0.0-beta1[18 fixes].
+
+
+Thanks to all the community members who helped make this happen:
+https://github.com/pushpavanthar[Purushotham Pushpavanthar],
+https://github.com/jfinsel[Jeremy Finzel],
+https://github.com/grantcooksey[Grant Cooksey]

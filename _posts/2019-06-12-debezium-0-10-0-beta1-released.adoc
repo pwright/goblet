@@ -1,0 +1,26 @@
+---
+layout: post
+title:  Debezium 0.10.0.Beta1 Released
+date:   2019-06-12 10:19:59 -0600
+tags: [ releases, mysql, postgres, mongodb, sqlserver, oracle, docker ]
+author: gmorling
+---
+
+Another week, another Debezium release -- I'm happy to announce the release of Debezium *0.10.0.Beta1*!
+
+Besides the upgrade to Apache Kafka 2.2.1 (https://issues.redhat.com/browse/DBZ-1316[DBZ-1316]),
+this mostly fixes some bugs, including a regression to the MongoDB connector introduced in the Alpha2 release
+(https://issues.redhat.com/browse/DBZ-1317[DBZ-1317]).
+
+A very welcomed usability improvement is that the connectors will log a warning now
+if not at least one table is actually captured as per the whitelist/blacklist configuration
+(https://issues.redhat.com/browse/DBZ-1242[DBZ-1242]).
+This helps to prevent the accidental exclusion all tables by means of an incorrect filter expression,
+in which case the connectors "work as intended", but no events are propagated to the message broker.
+
+Please see the link:/docs/releases/#release-0-10-0-beta1[release notes] for the complete list of issues fixed in this release.
+Also make sure to examine the upgrade guidelines for 0.10.0.Alpha1 and Alpha2 when upgrading from earlier versions.
+
+Many thanks to community members https://github.com/pan3793[Cheng Pan] and https://github.com/ChingTsai[Ching Tsai] for their contributions to this release!
+
++++<!-- more -->+++

@@ -1,0 +1,22 @@
+## Jekyll
+_site
+.sass-cache
+.jekyll-cache
+
+## OS related
+*.DS_Store
+
+## IDE
+.settings
+.project
+.buildpath
+.idea
+*.iml
+
+## Ruby and Rake tools
+.rvmrc
+.bundle
+vendor
+
+## Modules
+node_modules

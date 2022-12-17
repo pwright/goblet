@@ -1,0 +1,173 @@
+---
+layout: base
+---
+
+<div class="row post-text-padding row-no-expand">
+  <!-- Sidebar -->
+  <div class="col-md-3">{% include blog-menu.html %}</div>
+  <div class="col-md-9">
+    <div class="post">
+      {% assign postAuthors = page.author | remove: " " | split: "," %}
+      <div
+        class="row"
+        style="margin-left: 0; margin-right: 0; margin-bottom: 10px"
+      >
+        <div class="col-sm-12" style="padding-left: 0px">
+          <div style="display: table-cell; vertical-align: top">
+            <div
+              style="
+                width: 72px;
+                border: 1px solid #ccc;
+                padding: 3px;
+                display: inline-block;
+              "
+            >
+            {% if postAuthors.size == 1 and site.data.authors[postAuthors.first].avatar %} 
+                  <img src="/assets/images/{{ site.data.authors[postAuthors.first].avatar }}" style="width: 64px;"> 
+                {% else %}
+                  <img src="/assets/images/color_debezium_64px.png" style="width: 64px;"> 
+                {% endif %}
+            </div>
+          </div>
+          <div style="display: table-cell; vertical-align: top">
+            <div style="margin-left: 8px">
+              <span
+                class="hidden-sm hidden-xs"
+                style="font-size: 2.75rem; line-height: 1"
+              >
+                <a href="{{site.baseurl}}{{ page.url }}">{{ page.title }}</a>
+              </span>
+              <span
+                class="hidden-md hidden-lg"
+                style="font-size: 2rem; line-height: 1"
+              >
+                <a href="{{site.baseurl}}{{ page.url }}">{{ page.title }}</a>
+              </span>
+              <div class="byline" style="line-height: 1">
+                {% assign resolvedAuthors = "" | split: ',' %}
+                    {% for postAuthor in postAuthors %}
+                      {% assign authorName = site.data.authors[postAuthor].name %}
+                      {% if authorName %} 
+                        {% assign resolvedAuthors = resolvedAuthors | push: authorName %}
+                      {% else %}
+                        {% assign resolvedAuthors = resolvedAuthors | push: postAuthor %}
+                      {% endif %}
+                    {% endfor %}
+                    <em> {{ page.date | date: "%B %-d, %Y"}} by </em>
+                    <em> {{ resolvedAuthors | join: ", " }} </em>
+                <div class="hidden-xs" style="margin-top: 5px">
+                  {% for tag in page.tags %}
+                  <a
+                    class="label label-info hidden-sm hidden-xs"
+                    href="/tag/{{ tag }}/"
+                    >{{ tag }}</a
+                  >
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid__item width-12-12">{{ content }}</div>
+    </div>
+    {% if postAuthors %}
+   
+      {% for postAuthor in postAuthors %}
+      {% assign authorName = site.data.authors[postAuthor].name %}
+      <div class="well">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>{{ authorName }}</h2>
+          {% if site.data.authors[postAuthor].bio %}
+          <p>
+            <span class="bio-size"
+              >{{ site.data.authors[postAuthor].bio }}</span
+            >
+          </p>
+          {% endif %}
+          <p class="bio-size">
+            {% if site.data.authors[postAuthor].twitter %}
+            <a href="https://twitter.com/{{ site.data.authors[postAuthor].twitter }}">
+              <i class="icon-twitter"></i>
+            </a>
+            &nbsp;
+            {% endif %}
+            {% if site.data.authors[postAuthor].github %}
+            <a href="https://github.com/{{ site.data.authors[postAuthor].github }}">
+              <i class="icon-github"></i>
+            </a>
+            &nbsp;
+            {% endif %}
+            {% if site.data.authors[postAuthor].linkedin %}
+            <a href="https://www.linkedin.com/in/{{ site.data.authors[postAuthor].linkedin }}">
+              <i class="icon-linkedin"></i>
+            </a>
+            &nbsp;
+            {% endif %}
+          </p>
+        </div>
+        <div class="col-md-4">
+          {% if site.data.authors[postAuthor].avatar %}
+          <img
+            alt=""
+            class="img-responsive pull-right portrait"
+            src="/assets/images/{{ site.data.authors[postAuthor].avatar }}"
+          />
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+      <ul class="pager pager-blog">
+        {% if page.previous.url %}
+          <li class="previous">
+            <a href="{{page.previous.url}}" class="previous"> &laquo; Previous</a>
+        </li>
+        {% else %}
+          <li class="previous disabled">
+            <a href="{{page.previous.url}}" class="previous"> &laquo; Previous</a>
+          </li>
+        {% endif %}        
+        {% if page.next.url %}
+        <li class="next"><a href="{{page.next.url}}">Next &raquo; </a></li>
+        {% else %}
+          <li class="next disabled"><a href="{{page.next.url}}">Next &raquo; </a></li>
+        {% endif %}
+      </ul>
+    
+    {% endif %}
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <h2>About Debezium</h2>
+        <p>
+          Debezium is an open source distributed platform that turns your existing databases into event streams,
+          so applications can see and respond almost instantly to each committed row-level change in the databases.
+          Debezium is built on top of <a href="http://kafka.apache.org/">Kafka</a> and provides <a href="http://kafka.apache.org/documentation.html#connect">Kafka Connect</a> compatible connectors that monitor specific database management systems.
+          Debezium records the history of data changes in Kafka logs, so your application can be stopped and restarted at any time and can easily consume all of the events it missed while it was not running,
+          ensuring that all events are processed correctly and completely.
+          Debezium is <a href="/license/">open source</a> under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Get involved</h2>
+        <p>
+          We hope you find Debezium interesting and useful, and want to give it a try.
+          Follow us on Twitter <a href="https://twitter.com/debezium">@debezium</a>, <a href="https://debezium.zulipchat.com/#narrow/stream/302529-users">chat with us on Zulip</a>,
+          or join our <a href="https://groups.google.com/forum/#!forum/debezium">mailing list</a> to talk with the community.
+          All of the code is open source <a href="https://github.com/debezium/">on GitHub</a>,
+          so build the code locally and help us improve ours existing connectors and add even more connectors.
+          If you find problems or have ideas how we can improve Debezium, please let us know or <a href="https://issues.redhat.com/projects/DBZ/issues/">log an issue</a>.
+        </p>
+      </div>
+    </div>
+    
+    {% if site.disqus.shortname and jekyll.environment == 'production' %}
+      {% include disqus_comments.html %}
+    {% endif %}
+  </div>
+</div>

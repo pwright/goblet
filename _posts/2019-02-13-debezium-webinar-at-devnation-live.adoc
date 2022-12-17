@@ -1,0 +1,36 @@
+---
+layout: post
+title:  Debezium at DevNation Live
+date:   2019-02-13 10:19:59 -0600
+tags: [ introduction, presentation ]
+author: gmorling
+---
+
+Last week I had the pleasure to do a https://developers.redhat.com/videos/youtube/QYbXDp4Vu-8/[webinar on change data streaming patterns for microservices] with the fabulous Burr Sutter at DevNation Live.
+
+The recording of that 30 min session is available on YouTube now.
+It also contains a demo that shows how to set-up a data streaming pipeline with Debezium and Apache Kafka,
+running on OpenShift.
+The demo begins at 12 min 40 into the recording.
+
+Enjoy!
+
++++<!-- more -->+++
+
+++++
+<div class="responsive-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QYbXDp4Vu-8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--<iframe width="1600" height="900" src="https://www.youtube.com/embed/IOZ2Um6e430?rel=0" frameborder="0" allowfullscreen></iframe>-->
+</div>
+++++
+
+{nbsp} +
+You can also find the https://speakerdeck.com/gunnarmorling/change-data-streaming-patterns-for-microservices-with-debezium-apache-kafka-meetup-hamburg[slide deck] (in a slightly extended version) on Speaker Deck:
+{nbsp} +
+{nbsp} +
+
+++++
+<div style="text-align-center">
+<script async class="speakerdeck-embed" data-id="c390d77e50464c99916ede7368a279c2" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
+++++
