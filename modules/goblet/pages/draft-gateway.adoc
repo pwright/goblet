@@ -1,4 +1,5 @@
 :mod-loc: ./partials/
+:linkroot: 
 // Standard document attributes to be used in the documentation
 //
 // The following are shared by all documents
