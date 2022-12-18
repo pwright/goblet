@@ -1,4 +1,5 @@
 # A preliminary .gitignore file borrowed from https://github.com/asciidoctor/asciidoctor/blob/master/.gitignore under MIT License
+goblet/logseq/metadata.edn
 .cache/
 .DS_Store
 .vale/styles/RedHat.zip
