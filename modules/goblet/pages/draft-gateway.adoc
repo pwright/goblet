@@ -76,7 +76,7 @@ Installing the `skupper` command-line interface (CLI) provides a simple method t
 
 .Procedure
 
-include::{mod-loc}fragment-skupper-install-steps.adoc[]
+//include::{mod-loc}fragment-skupper-install-steps.adoc[]
 
 
 . Verify the installation.
@@ -831,9 +831,10 @@ $ skupper init --ingress none
 :leveloffset!:
 
 :mod-loc: ./partials/
-endif::mod-loc[]
-include::{mod-loc}attributes.adoc[]
+//endif::mod-loc[]
+//include::{mod-loc}attributes.adoc[]
 // Type: assembly
+:leveloffset: 1
 [id="built-in-security-options"]
 = Securing a {service-network}
 

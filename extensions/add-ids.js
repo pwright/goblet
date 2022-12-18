@@ -1,24 +1,28 @@
-function gistBlockMacro () {
-    const self = this;
-    self.named('gist')
-    self.process(function (parent, target, attrs) {
-      const titleHTML = attrs.title ? `<div class="title">${attrs.title}</div>\n` : ''
-      const html = `<div class="openblock gist">
-    ${titleHTML}<div class="content">
-      <script src="https://gist.github.com/${target}.js"></script>
-    </div>
-  </div>`
-      return self.createBlock(parent, 'pass', html, attrs, {})
+var util = require('util')
+
+var counter = 0
+
+function processblocks(blocks) {
+      for (var i =0; i<blocks.length; i++) {
+          if(blocks[i].getId && blocks[i].setId) {
+                if(!blocks[i].getId()) { // only add id if no existing id
+		      blocks[i].setId("comment_"+counter++);
+		}
+	}
+          if(blocks[i].hasBlocks && blocks[i].hasBlocks()){
+		processblocks(blocks[i].getBlocks())
+          }
+      }
+}
+
+
+module.exports = function (registry) {
+  registry.treeProcessor(function () {
+    var self = this
+    self.process(function (doc) {
+      blocks = doc.getBlocks()
+      processblocks(blocks)
+      return doc
     })
-  }
-  
-  module.exports.register = function register (registry) {
-    if (typeof registry.register === 'function') {
-      registry.register(function () {
-        this.blockMacro(gistBlockMacro)
-      })
-    } else if (typeof registry.block === 'function') {
-      registry.blockMacro(gistBlockMacro)
-    }
-    return registry
-  }
+  })
+}
