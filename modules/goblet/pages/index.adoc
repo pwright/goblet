@@ -1,4 +1,6 @@
 # Goblet
 
+This repo provides a way to:
 
-gist::4b44db7b60724ceb3d969a449f30a48a[]
+* Create previews of major documentation changes
+* Create previews where a reviewer can copy specific comments to Jira and other tools
