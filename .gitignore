@@ -1,0 +1,24 @@
+# A preliminary .gitignore file borrowed from https://github.com/asciidoctor/asciidoctor/blob/master/.gitignore under MIT License
+goblet/logseq/metadata.edn
+.cache/
+.DS_Store
+.vale/styles/RedHat.zip
+/*.gem
+/*.html
+/.bundle
+/.idea/
+/.ruby-gemset
+/.ruby-version
+/.yardoc/
+/build/
+/Gemfile.lock
+/node_modules/
+/pkg/
+/rdoc/
+/shippable/
+/tools/__pycache__/
+/tools/temp/
+package-lock.json
+package.json
+vale-report*
+workspace.code-workspace
